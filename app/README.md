@@ -15,7 +15,7 @@ For Art Blocks Artist Application
 
 ## Links
 
-*Invisillations* Prototype — [jacobjoaquin.github.io/prototype/](https://jacobjoaquin.github.io/prototype/)
+*Invisillations* Prototype — [jacobjoaquin.github.io/prototypeAB/](https://jacobjoaquin.github.io/prototypeAB/)
 
 Portfolio — [jacobjoaquin.myportfolio.com](https://jacobjoaquin.myportfolio.com)
 
