@@ -63,7 +63,7 @@ I've selected 3 of the 11 color gradients currently used in *Invisillations* to 
 
 *pinkglow:* This palette (along with blueglow and greenglow) was developed specifically for *Invisillations*. The idea was to simulate a bloom effect without actually using a bloom effect. The narrow band of white fades into and through a saturated pink and is surrounded by wide bands of near black, creating a strong *techno* aesthetic, a quality that coincides with the conceptual undertones of the piece.
 
-Each gradient is designed so that end color resolves with the starting color. This allows these 1-diminsional color tables to be looped without any perceivable discontinuity. 
+Each gradient is designed so that the end color resolves with the starting color. This allows these 1-dimensional color tables to be looped without any perceivable discontinuity. 
 
 ---
 
@@ -96,7 +96,7 @@ As a seamless tile, a color picker agent can traverse the generated texture in a
 
 ### Palette Shader
 
-A gradient starts as a list of position points and a list of hexidecimal colors and goes through a series a functions to produce code that is injected into a shader.
+A gradient starts as a list of position points and a list of hexadecimal colors and goes through a series of functions to produce code that is injected into a shader.
 
 ```javascript
 prismatics: {
@@ -145,17 +145,17 @@ The camera is placed near the center. Depending on a randomly selected option, t
 
 During my formidable years I studied music, synthesizers, digital signal processing, and coding. My approach to visual art is intrinsically tied to these concepts.
 
-Shaders are particulary interesting to me as a medium because there is a significant overlap with audio synthesizers. In fact I would say shaders are a synthesizer that exists in the visual domain.
+Shaders are particularly interesting to me as a medium because there is a significant overlap with audio synthesizers. In fact I would say shaders are a synthesizer that exists in the visual domain.
 
 ![Classic Waveforms](./assets/waveforms.jpg)
 
-Whether expressed as a continuous change of voltages or as mathematical formulas, both synthesizers and shaders use fundamental the waveforms sinusoidal, triangle, saw/ramp, and noise.
+Whether expressed as a continuous change of voltages or as mathematical formulas, both synthesizers and shaders use fundamental waveforms sinusoidal, triangle, saw/ramp, and noise.
 
 These classic synthesizer waveforms form a pillar of *Invisillations*. 
 
 ---
 
-## Loops and Clocsk
+## Loops and Clocks
 
 Every output forms a perfect loop; Outputs are fully determinant as all oscillations and animations are written as a function of time.
 
@@ -165,7 +165,7 @@ This is achieved by creating a **primary clock** using JavaScript's `Date.now()`
 
 In this diagram, the statement `clock = (Date.now() % 60000) / 60000` converts a minute (as milliseconds) to a normalized range of zero to one. Overtime, the shape generated becomes that of a rising sawtooth wave, also known as a ramp.
 
-Oscillators and animations tap off the resultant wavefrom of the clock generator to ensure they remain in sync with one another.
+Oscillators and animations tap off the resultant waveform of the clock generator to ensure they remain in sync with one another.
 
 An advantage to this approach is that there are elements that will synchronize across the entire *Invisillations* collection (assuming the internal clocks of the playback devices are set to the correct time). In practice, this means mint #132 may have elements that perfectly synchronize with mints #145, #237, #762, etc.
 
@@ -173,17 +173,17 @@ An advantage to this approach is that there are elements that will synchronize a
 
 # Patching
 
-A patch on an analog synthesizer involves pluging cables from an output from one module to an input of another and setting values with knobs, switches, and buttons. The ability to configure a synthesizer in a variety of ways is what makes a modular synthesizer a modular synthesizer. The possible number and variety of outputs grows exponential with the addition of each new module added to a system.
+A patch on an analog synthesizer involves plugging cables from an output from one module to an input of another and setting values with knobs, switches, and buttons. The ability to configure a synthesizer in a variety of ways is what makes a modular synthesizer a modular synthesizer. The possible number and variety of outputs grows exponential with the addition of each new module added to a system.
 
 ![Synthesizer](./assets/synth.jpg)
 
-Code, and thus shaders, are another type of modular system. Instead of generating audio, shaders be patched to modulate color, vertices, camera position, light, etc.
+Code, and thus shaders, are another type of modular system. Instead of generating audio, shaders are patched to modulate color, vertices, camera position, light, etc.
 
 Within *Invisillations*, a shader synthesizer "patch" is generated as code. How a patch is generated is decided through a weighted set of probabilities set by myself.
 
 Various Sinusoids, triangle waves, ramps, pulses, noise, are combined with shader elements of points in space, distance between vectors, time, color, etc, to determine which color is read from the color palette.
 
-The following example demonstrates how the "Rotate Pix" module is added to the shader code. First, a list is made that will store all code that is to be added to the final shader. Then, if pixel rotatation module is enabled, the relevant code is added to the list, making it of the patch.
+The following example demonstrates how the "Rotate Pix" module is added to the shader code. First, a list is made that will store all code that is to be added to the final shader. Then, if the pixel rotation module is enabled, the relevant code is added to the list, making it a part of the patch.
 
 ```javascript
 // Collects shader code
@@ -207,15 +207,19 @@ The completed share is used as the basis for a material. This material is applie
 
 ### Volumetric Textures
 
-The final output of shader is a virtual volumetric texture. Just as sound fills a room, so do these oscillating mathematical patches.
+The final output of the shader is a virtual volumetric texture. Just as sound fills a room, so do these oscillating mathematical patches.
 
-For every point in this virtual space, the mathematical function that is formed by the patch is capable of describing what color that point in space should be.
+For every point in virtual space and time, the mathematical function that is formed by the patch is capable of describing what color that point in space should be.
 
-Though the only place where these waves of changing colors can be percieved is where they intersect with the walls of the geometry.
+Though the only place where these waves of changing colors can be perceived is where they intersect with the walls of the geometry.
+
+---
 
 ## Objects and Animations
 
 To increase visibility of the resultant outputs of the shader, satellite objects are placed within the space. These, too, are reactive to the resultant volumetric textures.
+
+---
 
 ## A Brief History
 
