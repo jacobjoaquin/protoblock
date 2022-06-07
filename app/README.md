@@ -53,7 +53,7 @@ A common question that arises in the generative community online chats is "How d
 
 I've selected 3 of the 11 color gradients currently used in *Invisillations* to discuss here:
 
-![Three color palettes](threePalettes.jpg)
+![Three color palettes](./assets/threePalettes.jpg)
 
 *eye:* The colors that makeup this gradient were pulled from a closeup photo of one of my eyes.
 
@@ -82,11 +82,11 @@ During the initial setup of the sketch, the palette is prerendered as texture us
 
 When a palette is formed, 1 of 3 possible methods are used to mix them: straight, skew left, or skew right. Here are the possible mixes when using the *eye*, *prismatics*, and *pinkglow* gradients:
 
-![Mixed Palettes](palettes_mixed.jpg)
+![Mixed Palettes](./assets/palettes_mixed.jpg)
 
 The final texture is a seamless tile, as demonstrated here:
 
-![Tiled Example](i_tiled.png)
+![Tiled Example](./assets/i_tiled.png)
 
 As a seamless tile, a color picker agent can traverse the generated texture in any conceivable path without introducing sudden breaks in continuity. And just like the game Asteroids, if the agent flys off the side of the screen, it ends up on the opposite side.
 
@@ -145,7 +145,7 @@ During my formidable years I studied music, synthesizers, digital signal process
 
 Shaders are particulary interesting to me as a medium because there is a significant overlap with audio synthesizers. In fact I would say shaders are a synthesizer that exists in the visual domain.
 
-![Classic Waveforms](waveforms.jpg)
+![Classic Waveforms](./assets/waveforms.jpg)
 
 Whether expressed as a continuous change of voltages or as mathematical formulas, both synthesizers and shaders use fundamental the waveforms sinusoidal, triangle, saw/ramp, and noise.
 
@@ -159,7 +159,7 @@ Every output forms a perfect loop; Outputs are fully determinant as all oscillat
 
 This is achieved by creating a **primary clock** using JavaScript's `Date.now()` function. With synthesizers, a clock is used to synchronize various elements together.
 
-![Primary Clock](primaryClock.jpg)
+![Primary Clock](./assets/primaryClock.jpg)
 
 In this diagram, the statement `clock = (Date.now() % 60000) / 60000` converts a minute (as milliseconds) to a normalized range of zero to one. Overtime, the shape generated becomes that of a rising sawtooth wave, also known as a ramp.
 
@@ -173,7 +173,7 @@ An advantage to this approach is that there are elements that will synchronize a
 
 A patch on an analog synthesizer involves pluging cables from an output from one module to an input of another and setting values with knobs, switches, and buttons. The ability to configure a synthesizer in a variety of ways is what makes a modular synthesizer a modular synthesizer. The possible number and variety of outputs grows exponential with the addition of each new module added to a system.
 
-![Synthesizer](synth.jpg)
+![Synthesizer](./assets/synth.jpg)
 
 Code, and thus shaders, are another type of modular system. Instead of generating audio, shaders be patched to modulate color, vertices, camera position, light, etc.
 
@@ -197,7 +197,7 @@ if (P.pixRotateDo) {
 
 Once all the code for the randomly enabled options are generated, they are joined and placed inside a custom shader template.
 
-![Switches](switch.jpg)
+![Switches](./assets/switch.jpg)
 
 The completed share is used as the basis for a material. This material is applied to the room, and satellite objects roaming the space.
 
