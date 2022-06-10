@@ -229,4 +229,4 @@ I was introduced to Csound, a code-based computer music language, by [Dr. Richar
 
 Implications of data communications became part of my creative thinking when I was mentored by [Max V. Mathews](https://en.wikipedia.org/wiki/Max_Mathews), who invented the digital oscillator at Bell Laboratories in the 1950s.
 
-In early January 2022, I received a phone call from [Leo Villareal](http://villareal.net/), during which he recommended that I learn ThreeJS. This was the missing piece I needed to create Invisillations.
+In early January 2022, I received a phone call from [Leo Villareal](http://villareal.net/), during which he recommended that I learn ThreeJS. This was the missing piece I needed to create *Invisillations*.
