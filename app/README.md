@@ -15,7 +15,7 @@ For Art Blocks Artist Application
 
 ## Links
 
-*Invisillations* Prototype — [jacobjoaquin.github.io/prototypeAB/](https://jacobjoaquin.github.io/prototypeAB/)
+*Invisillations* Prototype — [invisinode.vercel.app](https://invisinode.vercel.app)
 
 Portfolio — [jacobjoaquin.myportfolio.com](https://jacobjoaquin.myportfolio.com)
 
@@ -80,7 +80,7 @@ A palette is created using 1 to 4 gradients randomly selected from a list of 11.
 | 3 | 990 |
 | 4 | 7920 |
 
-During the initial setup of the sketch, the palette is prerendered as texture using a custom shader. The gradients are expressed horizontally, while blending occurs on the vertical.
+During the initial setup of the sketch, the palette is prerendered as a texture using a custom shader. The gradients are expressed horizontally, while blending occurs on the vertical.
 
 When a palette is formed, 1 of 3 possible methods are used to mix them: straight, skew left, or skew right. Here are the possible mixes when using the *eye*, *prismatics*, and *pinkglow* gradients:
 
@@ -129,7 +129,7 @@ By generating the shader code in this way, it reduces the size of the total code
 
 Special care is taken to preserve color during the mixing phase. The shader takes the original RGB data, converts it to LAB color space, blends the gradients, and then converts the data back to RGB color space. This is done to provide a richer color experience for viewers.
 
-The computation required for mixing in LAB color space is costly, which is why I made the decision to prerender the palette to texture at the start of the sketch.
+The computation required for mixing in LAB color space is costly, which is why I made the decision to prerender the palette to a texture at the start of the sketch.
 
 --- 
 
@@ -137,7 +137,7 @@ The computation required for mixing in LAB color space is costly, which is why I
 
 The next layer is the creation of the space. This part is relatively simple. A cylinder is created with 3, 4, 5, 6, or 128 sides, resulting with a room in the shape of a triangle, square, pentagon, hexagon, or circle.
 
-The camera is placed near the center. Depending on a randomly selected option, the camera starts in 1 of 9 chosen areas on the x and y axes. Sinusoidal functions slowly move the camera along the y and z axes.
+The camera is placed near the center. Depending on a randomly selected option, the camera starts in 1 of 9 chosen areas on the x and y axes. Sinusoidal functions slowly move the camera along the y and z axes, stimulating a gentle floating motion.
 
 --- 
 
@@ -171,7 +171,7 @@ An advantage to this approach is that there are elements that will synchronize a
 
 ---
 
-# Patching
+## Patching
 
 A patch on an analog synthesizer involves plugging cables from an output from one module to an input of another and setting values with knobs, switches, and buttons. The ability to configure a synthesizer in a variety of ways is what makes a modular synthesizer a modular synthesizer. The possible number and variety of outputs grows exponential with the addition of each new module added to a system.
 
@@ -179,9 +179,9 @@ A patch on an analog synthesizer involves plugging cables from an output from on
 
 Code, and thus shaders, are another type of modular system. Instead of generating audio, shaders are patched to modulate color, vertices, camera position, light, etc.
 
-Within *Invisillations*, a shader synthesizer "patch" is generated as code. How a patch is generated is decided through a weighted set of probabilities set by myself.
+Within *Invisillations*, a shader synthesizer "patch" is generated as code. How a patch is generated is decided through a set of weighted probabilities decided by myself.
 
-Various Sinusoids, triangle waves, ramps, pulses, noise, are combined with shader elements of points in space, distance between vectors, time, color, etc, to determine which color is read from the color palette.
+Various sinusoids, triangle waves, ramps, pulses, noise, are combined with shader elements of points in space, distance between vectors, time, color, etc, to determine which color is read from the color palette.
 
 The following example demonstrates how the "Rotate Pix" module is added to the shader code. First, a list is made that will store all code that is to be added to the final shader. Then, if the pixel rotation module is enabled, the relevant code is added to the list, making it a part of the patch.
 
@@ -201,7 +201,7 @@ Once all the code for the randomly enabled options are generated, they are joine
 
 ![Switches](./assets/switch.jpg)
 
-The completed share is used as the basis for a material. This material is applied to the room, and satellite objects roaming the space.
+The completed shader is used as the basis for a material. This material is applied to the room, and satellite objects roaming the space.
 
 ---
 
@@ -211,7 +211,7 @@ The final output of the shader is a virtual volumetric texture. Just as sound fi
 
 For every point in virtual space and time, the mathematical function that is formed by the patch is capable of describing what color that point in space should be.
 
-Though the only place where these waves of changing colors can be perceived is where they intersect with the walls of the geometry.
+Though the only place where these waves of changing colors can be perceived is where they intersect with the surfaces of the geometries.
 
 ---
 
@@ -223,10 +223,10 @@ To increase visibility of the resultant outputs of the shader, satellite objects
 
 ## A Brief History
 
-Invisillations is a synthesis of a lifetime of conceptual, creative, and technical experience.
+*Invisillations* is a synthesis of a lifetime of conceptual, creative, and technical experience.
 
-I was introduced to Csound, a code-based computer music language, by Professor Dr. Richard Boulanger. This is where I learned sound generators, filters, digital signal processing, and to compose generative soundscapes.
+I was introduced to Csound, a code-based computer music language, by [Dr. Richard Boulanger](https://en.wikipedia.org/wiki/Richard_Boulanger). This is where I learned sound generators, filters, digital signal processing, and to compose generative soundscapes.
 
-Implications of data communications became part of my creative thinking when I was mentored by Max V. Mathews, who invented the digital oscillator at Bell Laboratories in the 1950s.
+Implications of data communications became part of my creative thinking when I was mentored by [Max V. Mathews](https://en.wikipedia.org/wiki/Max_Mathews), who invented the digital oscillator at Bell Laboratories in the 1950s.
 
-In early January 2022, I received a phone call from Leo Villareal, during which he recommended that I learn ThreeJS. This was the missing piece I needed to create Invisillations.
+In early January 2022, I received a phone call from [Leo Villareal](http://villareal.net/), during which he recommended that I learn ThreeJS. This was the missing piece I needed to create Invisillations.
