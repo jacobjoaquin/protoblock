@@ -221,6 +221,18 @@ To increase visibility of the resultant outputs of the shader, satellite objects
 
 ---
 
+## Physical Media
+
+While no decisions have been made about how these animations can be transformed into physical artifacts, I'm in the process of exploring some promising options.
+
+For example, the following captures are UV printed on brass and aluminum:
+
+![Metal Prints](./assets/uvprints.jpg)
+
+These prototypes were crafted by fabrication artist Jason Good, who is also one of my trusted collaborators.
+
+---
+
 ## A Brief History
 
 *Invisillations* is a synthesis of a lifetime of conceptual, creative, and technical experience.
